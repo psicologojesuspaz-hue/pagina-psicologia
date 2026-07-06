@@ -69,6 +69,7 @@
   .nav{
     display:flex; align-items:center; justify-content:space-between;
     padding:18px 28px; max-width:var(--maxw); margin:0 auto;
+    position:relative;
   }
   .brand{
     font-family:'Fraunces', serif;
@@ -89,6 +90,20 @@
     font-size:0.88rem; font-weight:700;
   }
   .burger{display:none; font-size:1.6rem; background:none; border:none; color:var(--ink); cursor:pointer;}
+  .nav-links.open{
+    display:flex !important;
+    flex-direction:column;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:var(--white);
+    padding:20px 28px;
+    gap:18px;
+    box-shadow:0 12px 24px rgba(21,58,50,0.12);
+    border-bottom:1px solid rgba(21,58,50,0.08);
+  }
+  .nav-links.open .nav-cta{align-self:flex-start;}
 
   /* ---------- HERO ---------- */
   .hero{
@@ -348,15 +363,15 @@
 <header>
   <div class="nav">
     <div class="brand">Jesús Paz <span>· Psicólogo</span></div>
-    <nav class="nav-links">
+    <nav class="nav-links" id="navLinks">
       <a href="#sobre-mi">Sobre mí</a>
       <a href="#modalidades">Modalidades</a>
-      <a href="#bariatrica">Evaluación Bariátrica</a>
+      <a href="#bariatrica">Ev. Bariátrica</a>
       <a href="#servicios">Servicios</a>
       <a href="#actualidad">Actualidad</a>
       <a href="#agendar" class="nav-cta">Agendar hora</a>
     </nav>
-    <button class="burger" aria-label="Menú">☰</button>
+    <button class="burger" id="burgerBtn" aria-label="Menú">☰</button>
   </div>
 </header>
 
@@ -392,8 +407,9 @@
       <span class="eyebrow">Sobre mí</span>
       <h2>Psicólogo clínico, enfocado en tu proceso</h2>
       <p style="color:var(--text-soft); margin-top:14px; max-width:520px;">
-        Trabajo con adultos y parejas que buscan entender lo que sienten y tomar decisiones con más tranquilidad. 
-Mi enfoque es cognitivo-conductual, combinando herramientas basadas en evidencia con un espacio cercano, respetuoso y sin juicios     </p>
+        Trabajo con adultos y parejas que buscan entender lo que sienten y tomar decisiones con más tranquilidad.
+        Mi enfoque es cognitivo-conductual, combinando herramientas basadas en evidencia con un espacio cercano, respetuoso y sin juicios.
+      </p>
       <ul class="credentials">
         <li>Psicólogo clínico, especializado en ansiedad y depresión</li>
         <li>Terapia de pareja y comunicación efectiva</li>
@@ -475,7 +491,7 @@ Mi enfoque es cognitivo-conductual, combinando herramientas basadas en evidencia
       <div class="service-card">
         <div class="icon">🕯️</div>
         <h4>Depresión</h4>
-        <p>Acompañamiento para encontrar el apoyo para recuperar la motivación, paso a paso.</p>
+        <p>Acompañamiento para encontrar apoyo y recuperar motivación, paso a paso.</p>
       </div>
       <div class="service-card">
         <div class="icon">🤝</div>
@@ -573,7 +589,7 @@ Mi enfoque es cognitivo-conductual, combinando herramientas basadas en evidencia
         <h5>Navegación</h5>
         <div class="footer-links">
           <a href="#sobre-mi">Sobre mí</a>
-          <a href="#bariatrica">Evaluación Bariátrica</a>
+          <a href="#bariatrica">Ev. Bariátrica</a>
           <a href="#agendar">Agendar hora</a>
         </div>
       </div>
@@ -650,6 +666,20 @@ Mi enfoque es cognitivo-conductual, combinando herramientas basadas en evidencia
   document.getElementById('closeModal').addEventListener('click', () => overlay.classList.remove('open'));
   overlay.addEventListener('click', (e) => { if(e.target === overlay) overlay.classList.remove('open'); });
   document.addEventListener('keydown', (e) => { if(e.key === 'Escape') overlay.classList.remove('open'); });
+
+  // Menú móvil
+  const burgerBtn = document.getElementById('burgerBtn');
+  const navLinks = document.getElementById('navLinks');
+  burgerBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    burgerBtn.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      burgerBtn.textContent = '☰';
+    });
+  });
 </script>
 
 </body>
