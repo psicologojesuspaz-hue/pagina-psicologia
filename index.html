@@ -528,28 +528,28 @@
     </div>
     <div class="blog-grid">
       <button class="blog-card" data-article="a1">
+        <div class="blog-topic"><span class="tag">Bariátrica</span>
+          <h4>Por qué la evaluación psicológica es clave antes de una cirugía bariátrica</h4>
+        </div>
+        <p>No es un trámite: es preparación real para un cambio de vida profundo.</p>
+        <div class="blog-readmore">Leer más →</div>
+      </button>
+      <button class="blog-card" data-article="a2">
         <div class="blog-topic"><span class="tag">Ansiedad</span>
           <h4>3 señales de que tu ansiedad necesita atención profesional</h4>
         </div>
         <p>Reconocerlas a tiempo hace toda la diferencia en tu tratamiento.</p>
         <div class="blog-readmore">Leer más →</div>
       </button>
-      <button class="blog-card" data-article="a2">
-        <div class="blog-topic"><span class="tag">Pareja</span>
-          <h4>La técnica de comunicación que evita peleas repetidas</h4>
-        </div>
-        <p>Un cambio simple en cómo hablas puede transformar la conversación.</p>
-        <div class="blog-readmore">Leer más →</div>
-      </button>
       <button class="blog-card" data-article="a3">
-        <div class="blog-topic"><span class="tag">Sueño</span>
-          <h4>Por qué no descansas bien aunque duermas 8 horas</h4>
+        <div class="blog-topic"><span class="tag">Autoestima</span>
+          <h4>La diferencia entre autoestima y autoconfianza (y por qué importa)</h4>
         </div>
-        <p>La calidad del sueño importa tanto como la cantidad.</p>
+        <p>Confundirlas puede hacer que trabajes en lo que no es.</p>
         <div class="blog-readmore">Leer más →</div>
       </button>
     </div>
-    <div class="blog-note">Este espacio se actualiza de forma periódica con contenido nuevo sobre ansiedad, depresión, pareja, comunicación y sueño. Haz clic en una tarjeta para leer la nota completa.</div>
+    <div class="blog-note">Este espacio se actualiza de forma periódica con contenido nuevo sobre ansiedad, depresión, pareja, autoestima, regulación emocional y bienestar. Haz clic en una tarjeta para leer la nota completa.</div>
   </div>
 </section>
 
@@ -596,7 +596,10 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Jesús Paz — Psicólogo clínico</span>
-      <span>Atención confidencial · Online y presencial</span>
+      <span style="display:flex; gap:16px; align-items:center;">
+        <a href="#" id="privacyLink" style="text-decoration:underline;">Política de privacidad</a>
+        <span>Atención confidencial · Online y presencial</span>
+      </span>
     </div>
   </div>
 </footer>
@@ -616,6 +619,16 @@
 <script>
   const articles = {
     a1: {
+      tag: "Bariátrica",
+      title: "Por qué la evaluación psicológica es clave antes de una cirugía bariátrica",
+      body: [
+        "La cirugía bariátrica cambia el cuerpo rápido, pero la mente necesita tiempo para adaptarse. Por eso la evaluación psicológica previa no es un simple requisito administrativo: es preparación real.",
+        "Esta evaluación busca entender cómo te relacionas con la comida, qué expectativas tienes del resultado, y si existen patrones emocionales (ansiedad, impulsividad, antecedentes de trastornos alimentarios) que conviene abordar antes de operar.",
+        "También sirve para anticipar el después: muchos pacientes no están preparados para los cambios de identidad, de relaciones sociales o de imagen corporal que vienen tras la cirugía, y eso puede afectar los resultados a largo plazo si no se trabaja a tiempo.",
+        "Un informe psicológico bien hecho no busca poner obstáculos, sino asegurar que la persona llegue a la cirugía — y salga de ella — con las herramientas emocionales para sostener el cambio."
+      ]
+    },
+    a2: {
       tag: "Ansiedad",
       title: "3 señales de que tu ansiedad necesita atención profesional",
       body: [
@@ -626,26 +639,37 @@
         "Si te identificas con dos o más de estas señales, una evaluación profesional te puede ayudar a entender qué está pasando y a construir estrategias concretas para manejarlo."
       ]
     },
-    a2: {
-      tag: "Pareja",
-      title: "La técnica de comunicación que evita peleas repetidas",
-      body: [
-        "Muchas discusiones de pareja se repiten porque se habla desde el reclamo, no desde la necesidad.",
-        "La técnica del 'mensaje yo' consiste en describir lo que sientes y necesitas, sin acusar al otro: en vez de 'nunca me escuchas', prueba 'me siento poco escuchado cuando esto pasa'.",
-        "Este pequeño cambio reduce la actitud defensiva de tu pareja y abre espacio real para resolver el problema, en lugar de repetir el mismo conflicto.",
-        "Practicarlo toma tiempo, pero es una de las herramientas más efectivas en terapia de pareja."
-      ]
-    },
     a3: {
-      tag: "Sueño",
-      title: "Por qué no descansas bien aunque duermas 8 horas",
+      tag: "Autoestima",
+      title: "La diferencia entre autoestima y autoconfianza (y por qué importa)",
       body: [
-        "Dormir 8 horas no garantiza un buen descanso si la calidad del sueño es baja.",
-        "Factores como el estrés acumulado, el uso de pantallas antes de dormir o despertares frecuentes durante la noche afectan las fases de sueño profundo, que son las que realmente restauran el cuerpo y la mente.",
-        "Señales de mala calidad de sueño: cansancio al despertar, dificultad para concentrarte durante el día e irritabilidad.",
-        "Mejorar tu higiene de sueño y, si es necesario, trabajar el estrés de base con apoyo profesional, puede mejorar notablemente tu descanso."
+        "Se usan como sinónimos, pero no son lo mismo — y confundirlas hace que muchas personas trabajen en lo que no es.",
+        "La autoconfianza es la creencia de que puedes lograr algo específico: dar una charla, aprender a nadar, manejar en la ciudad. Se construye con práctica y resultados concretos.",
+        "La autoestima es más profunda: es el valor que sientes que tienes como persona, independiente de si haces algo bien o mal. Alguien puede tener mucha confianza en su trabajo y, aun así, sentirse poco valioso como persona.",
+        "Por eso lograr un objetivo puntual no siempre mejora la autoestima de fondo. Trabajar la autoestima requiere revisar las creencias sobre uno mismo, no solo acumular logros."
       ]
     }
+  };
+
+  const privacyPolicy = {
+    tag: "Legal",
+    title: "Política de privacidad",
+    body: [
+      "<strong>Responsable de los datos</strong>",
+      "Jesús Paz, psicólogo clínico, es el responsable de los datos personales tratados a través de este sitio. Puedes contactarlo por WhatsApp al +56 9 4281 8448.",
+      "<strong>Qué información se recopila</strong>",
+      "Este sitio no tiene formularios propios que almacenen datos. La información que compartes al escribir por WhatsApp o al agendar una hora en Reservo.cl (nombre, teléfono, correo, motivo de consulta) es gestionada por esas plataformas y por mí como psicólogo tratante, no por este sitio web.",
+      "<strong>Confidencialidad profesional</strong>",
+      "Todo lo compartido durante las sesiones está protegido por el secreto profesional psicológico, conforme al Código de Ética Profesional del Colegio de Psicólogos de Chile. Esta información no se comparte con terceros, salvo obligación legal.",
+      "<strong>Terceros involucrados</strong>",
+      "Para agendar horas se utiliza Reservo.cl. Para contacto directo se utiliza WhatsApp (Meta). El sitio también carga tipografías desde Google Fonts. Cada uno de estos servicios cuenta con su propia política de privacidad.",
+      "<strong>Cookies y publicidad</strong>",
+      "Este sitio no utiliza cookies propias de seguimiento. Si en el futuro se incorporan herramientas de análisis o campañas publicitarias, esta política se actualizará para reflejarlo.",
+      "<strong>Tus derechos</strong>",
+      "De acuerdo con la Ley N° 19.628 sobre Protección de la Vida Privada, actualmente vigente en Chile, puedes solicitar acceso, rectificación o eliminación de tus datos personales. Desde el 1 de diciembre de 2026 estos derechos se amplían con la nueva Ley N° 21.719, que crea la Agencia de Protección de Datos Personales. Para ejercerlos, escríbeme directamente por WhatsApp.",
+      "<strong>Cambios a esta política</strong>",
+      "Esta política puede actualizarse periódicamente. Última actualización: julio de 2026."
+    ]
   };
 
   const overlay = document.getElementById('overlay');
@@ -679,6 +703,16 @@
       navLinks.classList.remove('open');
       burgerBtn.textContent = '☰';
     });
+  });
+
+  // Política de privacidad
+  document.getElementById('privacyLink').addEventListener('click', (e) => {
+    e.preventDefault();
+    modalContent.innerHTML =
+      '<span class="tag">' + privacyPolicy.tag + '</span>' +
+      '<h3>' + privacyPolicy.title + '</h3>' +
+      privacyPolicy.body.map(p => '<p>' + p + '</p>').join('');
+    overlay.classList.add('open');
   });
 </script>
 
