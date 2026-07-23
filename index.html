@@ -338,6 +338,15 @@
   }
   .float-wa:hover{transform:scale(1.08);}
 
+  /* ---------- FLOAT INSTAGRAM ---------- */
+  .float-ig{
+    position:fixed; bottom:92px; right:24px; z-index:60;
+    background:var(--gold); color:var(--ink); width:58px; height:58px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; box-shadow:0 8px 20px rgba(0,0,0,0.2);
+    transition:transform .2s;
+  }
+  .float-ig:hover{transform:scale(1.08);}
+
   /* ---------- RESPONSIVE ---------- */
   @media (max-width: 860px){
     .hero-grid, .about-grid, .bariatric-grid{grid-template-columns:1fr;}
@@ -603,6 +612,10 @@
     </div>
   </div>
 </footer>
+
+<a href="https://instagram.com/psicologo.jesuspaz" target="_blank" class="float-ig" aria-label="Ver Instagram">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#153A32" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="#153A32" stroke="none"/></svg>
+</a>
 
 <a href="https://wa.me/56942818448" target="_blank" class="float-wa" aria-label="Escribir por WhatsApp">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="#FFFDF9"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.9-4.45 9.9-9.9 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0 0 12.04 2zm0 18.06h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.15.83.84-3.07-.2-.32a8.16 8.16 0 0 1-1.26-4.36c0-4.51 3.67-8.19 8.19-8.19 2.19 0 4.24.86 5.79 2.4a8.13 8.13 0 0 1 2.4 5.79c0 4.51-3.68 8.19-8.11 8.19zm4.48-6.13c-.25-.12-1.45-.72-1.67-.8-.22-.08-.39-.12-.55.12-.16.25-.63.8-.78.96-.14.16-.29.18-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.16.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42-.14 0-.31-.02-.47-.02-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.04 0 1.2.88 2.36 1 2.52.12.16 1.73 2.64 4.2 3.7.59.25 1.05.4 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.45-.59 1.65-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.47-.28z"/></svg>
