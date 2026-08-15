@@ -709,6 +709,7 @@
     modalContent.innerHTML =
       '<span class="tag">' + data.tag + '</span>' +
       '<h3>' + data.title + '</h3>' +
+      '<p style="font-style:italic; color:var(--text-soft); font-size:0.85rem; margin-top:-8px;">Escrito por el psicólogo Jesús Paz</p>' +
       data.body.map(p => '<p>' + p + '</p>').join('') +
       '<div class="like-row">' +
         '<button class="like-btn" id="modalLikeBtn" data-article="' + key + '">' +
