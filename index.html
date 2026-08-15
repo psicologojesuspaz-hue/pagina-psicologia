@@ -273,8 +273,22 @@
   .blog-card h4{font-size:1.05rem; margin:10px 0 8px; line-height:1.35;}
   .blog-card p{font-size:0.88rem; color:var(--text-soft); padding:0 24px 18px;}
   .blog-readmore{
-    padding:0 24px 22px; font-size:0.82rem; font-weight:700; color:var(--gold-deep); display:flex; align-items:center; gap:6px;
+    padding:0 24px 22px; font-size:0.82rem; font-weight:700; color:var(--gold-deep); display:flex; align-items:center; gap:6px; justify-content:space-between;
   }
+  .like-mini{
+    display:flex; align-items:center; gap:4px; font-weight:600; color:var(--text-soft);
+  }
+  .like-row{
+    display:flex; align-items:center; gap:10px; margin-top:24px; padding-top:20px; border-top:1px solid var(--sand-deep);
+  }
+  .like-btn{
+    display:flex; align-items:center; gap:8px; background:var(--sand); border:1px solid var(--sand-deep);
+    padding:10px 18px; border-radius:30px; cursor:pointer; font-size:0.92rem; font-weight:600; color:var(--ink);
+    transition:transform .15s ease, background .2s ease;
+  }
+  .like-btn:hover{transform:translateY(-1px); background:var(--sand-deep);}
+  .like-btn.liked{background:var(--rose-soft); border-color:var(--rose); color:var(--rose-deep);}
+  .like-btn .heart{font-size:1.1rem;}
   .blog-note{
     margin-top:34px; text-align:center; font-size:0.85rem; color:var(--text-soft);
     background:var(--white); padding:16px 20px; border-radius:12px; border:1px dashed var(--sand-deep);
@@ -538,24 +552,24 @@
     <div class="blog-grid">
       <button class="blog-card" data-article="a1">
         <div class="blog-topic"><span class="tag">Bariátrica</span>
-          <h4>Lo que la evaluación psicológica bariátrica realmente evalúa</h4>
+          <h4>El momento del año que más consultas por evaluación bariátrica genera</h4>
         </div>
-        <p>No busca "aprobar" o "reprobar": busca prepararte para el cambio.</p>
-        <div class="blog-readmore">Leer más →</div>
+        <p>Planificarla con tiempo evita que se convierta en un trámite de última hora.</p>
+        <div class="blog-readmore">Leer más → <span class="like-mini">🤍 <span id="cardLikes-a1">—</span></span></div>
       </button>
       <button class="blog-card" data-article="a2">
-        <div class="blog-topic"><span class="tag">Ansiedad</span>
-          <h4>Por qué la ansiedad no se quita "pensando positivo"</h4>
+        <div class="blog-topic"><span class="tag">Pareja</span>
+          <h4>Qué es el apego ansioso y cómo se nota en una relación</h4>
         </div>
-        <p>Combatirla con fuerza de voluntad suele empeorarla, no mejorarla.</p>
-        <div class="blog-readmore">Leer más →</div>
+        <p>No es "ser muy intenso": es una forma aprendida de buscar seguridad.</p>
+        <div class="blog-readmore">Leer más → <span class="like-mini">🤍 <span id="cardLikes-a2">—</span></span></div>
       </button>
       <button class="blog-card" data-article="a3">
-        <div class="blog-topic"><span class="tag">Sueño</span>
-          <h4>Por qué dormir bien no es un lujo, es salud mental</h4>
+        <div class="blog-topic"><span class="tag">Bienestar</span>
+          <h4>Saborear lo bueno: la habilidad que casi nadie entrena</h4>
         </div>
-        <p>Un mal descanso sostenido afecta tu ánimo tanto como tus pensamientos.</p>
-        <div class="blog-readmore">Leer más →</div>
+        <p>No es solo evitar el malestar — es también aprender a quedarte con lo bueno.</p>
+        <div class="blog-readmore">Leer más → <span class="like-mini">🤍 <span id="cardLikes-a3">—</span></span></div>
       </button>
     </div>
     <div class="blog-note">Este espacio se actualiza de forma periódica con contenido nuevo sobre ansiedad, depresión, pareja, sueño y bienestar. Haz clic en una tarjeta para leer la nota completa.</div>
@@ -633,32 +647,32 @@
   const articles = {
     a1: {
       tag: "Bariátrica",
-      title: "Lo que la evaluación psicológica bariátrica realmente evalúa",
+      title: "El momento del año que más consultas por evaluación bariátrica genera",
       body: [
-        "Cuando alguien escucha 'evaluación psicológica' antes de una cirugía bariátrica, suele imaginarla como un filtro para 'aprobar o reprobar'. En realidad, el objetivo es otro: entender con qué herramientas emocionales llega la persona a un cambio tan grande, y reforzar las que falten.",
-        "Se revisan cosas como la relación con la comida, las expectativas reales sobre el resultado (la cirugía no resuelve por sí sola todo lo que llevó al sobrepeso), y si hay ansiedad, impulsividad o antecedentes que conviene trabajar antes de operar.",
-        "También se conversa sobre el después: cambios de imagen corporal, reacciones del entorno social y familiar, y el reordenamiento de la identidad que muchos pacientes no anticipan.",
-        "El informe final no busca poner trabas, sino asegurar que la persona llegue —y salga— de la cirugía con las herramientas emocionales para sostener el cambio a largo plazo."
+        "Es común que las consultas por evaluación psicológica bariátrica se disparen en ciertos periodos del año — cerca de fin de año o antes del verano, cuando muchas personas deciden dar el paso hacia la cirugía.",
+        "El problema de dejarlo para el último momento: los equipos médicos suelen requerir el informe psicológico como parte de un proceso con varios exámenes, y agendarlo con poca anticipación genera presión innecesaria, tanto para el paciente como para la calidad de la evaluación misma.",
+        "Una evaluación hecha con calma permite trabajar con más profundidad lo que realmente importa: expectativas realistas, relación con la comida, y preparación emocional para el después — no solo cumplir un check-list rápido antes de una fecha límite.",
+        "Si ya tienes fecha de cirugía o la estás considerando, conviene agendar la evaluación con varias semanas de margen, no dejarla para la última semana antes de los exámenes pre-quirúrgicos."
       ]
     },
     a2: {
-      tag: "Ansiedad",
-      title: "Por qué la ansiedad no se quita \"pensando positivo\"",
+      tag: "Pareja",
+      title: "Qué es el apego ansioso y cómo se nota en una relación",
       body: [
-        "Es un consejo bien intencionado, pero mal dirigido: pedirle a alguien con ansiedad que simplemente \"piense positivo\" ignora cómo funciona realmente el malestar ansioso.",
-        "La ansiedad no es solo un pensamiento negativo que se pueda reemplazar por uno positivo — es una respuesta del cuerpo (activación del sistema nervioso) que se combina con patrones de pensamiento e interpretación del entorno.",
-        "Intentar \"forzar\" positividad sin abordar la raíz suele generar más frustración: la persona siente que además de estar ansiosa, está \"fallando\" en controlarlo, lo que aumenta el malestar en vez de reducirlo.",
-        "Lo que sí funciona es entender qué dispara la ansiedad, trabajar la relación con esos pensamientos (no solo cambiarlos por otros) y regular la respuesta corporal con herramientas concretas — algo que se construye en terapia, no con una frase motivacional."
+        "El apego ansioso no es \"ser una persona muy intensa\" ni \"estar enamorado de más\" — es un estilo de vínculo que se aprende temprano, generalmente ligado a experiencias donde el cariño o la disponibilidad del otro se sintieron inconsistentes.",
+        "En la práctica, suele verse como necesidad frecuente de confirmación (\"¿todavía me quieres?\"), miedo intenso al abandono aunque no haya señales claras de que algo malo esté pasando, y dificultad para sentirse tranquilo cuando la pareja no responde de inmediato.",
+        "No es un defecto de carácter ni algo que se resuelva \"controlándose más\" — es un patrón que se construyó con el tiempo, y por lo tanto también se puede modificar con el tiempo, principalmente entendiendo de dónde viene esa necesidad de seguridad y aprendiendo a regularla sin depender por completo de la respuesta del otro.",
+        "Reconocerlo no es motivo de vergüenza: es el primer paso para dejar de repetir la misma dinámica en distintas relaciones."
       ]
     },
     a3: {
-      tag: "Sueño",
-      title: "Por qué dormir bien no es un lujo, es salud mental",
+      tag: "Bienestar",
+      title: "Saborear lo bueno: la habilidad que casi nadie entrena",
       body: [
-        "Solemos tratar el sueño como algo que se sacrifica primero cuando el día no alcanza — trabajo, pantallas, pendientes. Pero dormir mal de forma sostenida no es un tema menor: afecta directamente la salud mental.",
-        "La falta de sueño reparador se asocia con más irritabilidad, dificultad para regular emociones, menor capacidad de concentración y mayor vulnerabilidad a la ansiedad y la depresión — no como consecuencia lejana, sino como efecto medible en semanas.",
-        "Además, funciona en ambos sentidos: la ansiedad y el estrés dificultan dormir bien, y dormir mal empeora la ansiedad y el estrés — un círculo que se retroalimenta si no se interviene.",
-        "Cuidar el sueño (horarios estables, menos pantallas antes de acostarse, manejar el estrés de base) no es un tema aparte de la salud mental: es una de sus bases más subestimadas."
+        "En psicología solemos hablar mucho de cómo manejar la ansiedad, la tristeza o el estrés — y muy poco de una habilidad igual de importante: la capacidad de detenerse a disfrutar realmente lo bueno cuando ocurre.",
+        "Esta habilidad se llama \"savoring\" (saborear): prestar atención consciente a una experiencia agradable mientras sucede, en vez de vivirla en piloto automático y pasar rápido a lo siguiente.",
+        "La mayoría de las personas dedican mucha más energía mental a resolver problemas que a registrar los momentos que sí van bien — una comida agradable, un logro pequeño, un rato de conversación genuina — y eso tiene un costo real en el bienestar general.",
+        "Practicarlo es simple pero poco intuitivo: cuando algo bueno pase, detente unos segundos antes de seguir con lo siguiente, y nota conscientemente qué se siente. No es una técnica complicada, pero si no se entrena, casi nunca ocurre sola."
       ]
     }
   };
@@ -687,17 +701,81 @@
   const overlay = document.getElementById('overlay');
   const modalContent = document.getElementById('modalContent');
 
-  document.querySelectorAll('.blog-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const data = articles[card.dataset.article];
-      if(!data) return;
-      modalContent.innerHTML =
-        '<span class="tag">' + data.tag + '</span>' +
-        '<h3>' + data.title + '</h3>' +
-        data.body.map(p => '<p>' + p + '</p>').join('');
-      overlay.classList.add('open');
-    });
+  // --- Sistema de "me gusta" compartido (Abacus API) ---
+  const LIKE_NAMESPACE = 'psicologojesuspaz.netlify.app';
+  const openArticle = (key) => {
+    const data = articles[key];
+    if(!data) return;
+    modalContent.innerHTML =
+      '<span class="tag">' + data.tag + '</span>' +
+      '<h3>' + data.title + '</h3>' +
+      data.body.map(p => '<p>' + p + '</p>').join('') +
+      '<div class="like-row">' +
+        '<button class="like-btn" id="modalLikeBtn" data-article="' + key + '">' +
+          '<span class="heart">🤍</span><span>Me gusta</span> · <span id="modalLikeCount">—</span>' +
+        '</button>' +
+      '</div>';
+    overlay.classList.add('open');
+    refreshLikeDisplay(key, 'modalLikeCount', document.getElementById('modalLikeBtn'));
+  };
+
+  function refreshLikeDisplay(key, countElId, btnEl) {
+    const countEl = document.getElementById(countElId);
+    const alreadyLiked = localStorage.getItem('liked-' + key) === '1';
+    if (btnEl) {
+      btnEl.classList.toggle('liked', alreadyLiked);
+      btnEl.querySelector('.heart').textContent = alreadyLiked ? '❤️' : '🤍';
+    }
+    fetch(`https://abacus.jasoncameron.dev/get/${LIKE_NAMESPACE}/like-${key}`)
+      .then(r => r.ok ? r.json() : {value: 0})
+      .then(d => { if(countEl) countEl.textContent = d.value; })
+      .catch(() => { if(countEl) countEl.textContent = '0'; });
+  }
+
+  function handleLikeClick(key) {
+    if (localStorage.getItem('liked-' + key) === '1') return;
+    fetch(`https://abacus.jasoncameron.dev/hit/${LIKE_NAMESPACE}/like-${key}`)
+      .then(r => r.json())
+      .then(d => {
+        localStorage.setItem('liked-' + key, '1');
+        const modalBtn = document.getElementById('modalLikeBtn');
+        const modalCount = document.getElementById('modalLikeCount');
+        if (modalBtn && modalBtn.dataset.article === key) {
+          modalBtn.classList.add('liked');
+          modalBtn.querySelector('.heart').textContent = '❤️';
+          if (modalCount) modalCount.textContent = d.value;
+        }
+        const cardCount = document.getElementById('cardLikes-' + key);
+        if (cardCount) cardCount.textContent = d.value;
+      })
+      .catch(() => {});
+  }
+
+  overlay.addEventListener('click', (e) => {
+    if (e.target.closest('#modalLikeBtn')) {
+      handleLikeClick(e.target.closest('#modalLikeBtn').dataset.article);
+    }
   });
+
+  // Carga inicial del contador visible en cada tarjeta
+  Object.keys(articles).forEach(key => refreshLikeDisplay(key, 'cardLikes-' + key, null));
+
+  document.querySelectorAll('.blog-card').forEach(card => {
+    card.addEventListener('click', () => openArticle(card.dataset.article));
+  });
+
+  // Links directos: #articulo-bariatrica, #articulo-apego, #articulo-saborear
+  const articleSlugs = { bariatrica: 'a1', apego: 'a2', saborear: 'a3' };
+  function checkHashForArticle() {
+    const hash = location.hash.replace('#articulo-', '');
+    const key = articleSlugs[hash];
+    if (key) {
+      document.getElementById('actualidad').scrollIntoView({behavior:'smooth'});
+      setTimeout(() => openArticle(key), 400);
+    }
+  }
+  window.addEventListener('load', checkHashForArticle);
+  window.addEventListener('hashchange', checkHashForArticle);
 
   document.getElementById('closeModal').addEventListener('click', () => overlay.classList.remove('open'));
   overlay.addEventListener('click', (e) => { if(e.target === overlay) overlay.classList.remove('open'); });
