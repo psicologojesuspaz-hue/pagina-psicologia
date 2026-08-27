@@ -550,13 +550,6 @@
       </div>
     </div>
     <div class="blog-grid">
-      <button class="blog-card" data-article="a1">
-        <div class="blog-topic"><span class="tag">Bariátrica</span>
-          <h4>El momento del año que más consultas por evaluación bariátrica genera</h4>
-        </div>
-        <p>Planificarla con tiempo evita que se convierta en un trámite de última hora.</p>
-        <div class="blog-readmore">Leer más → <span class="like-mini">🤍 <span id="cardLikes-a1">—</span></span></div>
-      </button>
       <button class="blog-card" data-article="a2">
         <div class="blog-topic"><span class="tag">Pareja</span>
           <h4>Qué es el apego ansioso y cómo se nota en una relación</h4>
@@ -571,8 +564,15 @@
         <p>No es solo evitar el malestar — es también aprender a quedarte con lo bueno.</p>
         <div class="blog-readmore">Leer más → <span class="like-mini">🤍 <span id="cardLikes-a3">—</span></span></div>
       </button>
+      <button class="blog-card" data-article="a4">
+        <div class="blog-topic"><span class="tag">Depresión</span>
+          <h4>Depresión no es solo tristeza: las señales que se confunden con cansancio</h4>
+        </div>
+        <p>Muchas veces se interpreta como pereza, cuando en realidad pide atención.</p>
+        <div class="blog-readmore">Leer más → <span class="like-mini">🤍 <span id="cardLikes-a4">—</span></span></div>
+      </button>
     </div>
-    <div class="blog-note">Este espacio se actualiza de forma periódica con contenido nuevo sobre ansiedad, depresión, pareja, sueño y bienestar. Haz clic en una tarjeta para leer la nota completa.</div>
+    <div class="blog-note">Este espacio se actualiza de forma periódica con contenido nuevo. Haz clic en una tarjeta para leer la nota completa. <a href="#" id="archiveLink" style="text-decoration:underline; color:var(--ink); font-weight:700;">Ver artículos anteriores →</a></div>
   </div>
 </section>
 
@@ -674,8 +674,44 @@
         "La mayoría de las personas dedican mucha más energía mental a resolver problemas que a registrar los momentos que sí van bien — una comida agradable, un logro pequeño, un rato de conversación genuina — y eso tiene un costo real en el bienestar general.",
         "Practicarlo es simple pero poco intuitivo: cuando algo bueno pase, detente unos segundos antes de seguir con lo siguiente, y nota conscientemente qué se siente. No es una técnica complicada, pero si no se entrena, casi nunca ocurre sola."
       ]
+    },
+    a4: {
+      tag: "Depresión",
+      title: "Depresión no es solo tristeza: las señales que se confunden con cansancio",
+      body: [
+        "Cuando pensamos en depresión, solemos imaginar solo tristeza visible — llanto, desánimo evidente. Pero muchas veces se presenta de forma menos obvia, y por eso se confunde con \"estar cansado\" o \"andar bajoneado\" sin más.",
+        "Señales que suelen pasar desapercibidas: dificultad para concentrarte en cosas simples, perder interés en actividades que antes disfrutabas (no solo tristeza, sino indiferencia), cambios en el sueño o el apetito, y una sensación de lentitud física y mental que no se explica solo por falta de descanso.",
+        "El riesgo de no reconocerlo a tiempo es que se interpreta como pereza o falta de voluntad — tanto por la propia persona como por su entorno — cuando en realidad es una condición que requiere atención, no autoexigencia.",
+        "Si notas varias de estas señales sostenidas por más de dos semanas, no es necesario esperar a que se vuelva insoportable para buscar ayuda. Mientras antes se aborda, más simple suele ser el proceso."
+      ]
+    },
+    a5: {
+      tag: "Comunicación",
+      title: "La técnica que evita que una conversación se convierta en pelea",
+      body: [
+        "Muchas discusiones no escalan por el tema en sí, sino por cómo se dice lo que se quiere decir. Empezar una conversación difícil con acusación casi garantiza que la otra persona se ponga a la defensiva antes de escuchar el contenido real.",
+        "La técnica del \"mensaje yo\" consiste en describir lo que sientes y necesitas, en vez de calificar al otro: en lugar de \"siempre me ignoras\", algo como \"me siento poco escuchado cuando esto pasa\" — mismo problema, pero sin poner a la otra persona en modo defensa desde la primera frase.",
+        "No es una fórmula mágica ni garantiza que la conversación sea fácil, pero cambia radicalmente el punto de partida: abre espacio para resolver el problema juntos, en vez de decidir primero quién tiene la razón.",
+        "Como cualquier habilidad, toma práctica — sobre todo en el calor del momento, que es cuando más cuesta aplicarla. Por eso vale la pena practicarla primero en conversaciones de bajo riesgo, antes de necesitarla en una discusión importante."
+      ]
+    },
+    a6: {
+      tag: "Regulación emocional",
+      title: "Qué es la regulación emocional (y por qué no es lo mismo que \"controlarse\")",
+      body: [
+        "Es común escuchar \"regúlate\" como sinónimo de \"cálmate\" o \"no reacciones\" — pero regulación emocional no significa suprimir lo que sientes, sino poder sentirlo sin que te desborde completamente.",
+        "Reprimir una emoción (fingir que no está ahí) y regularla (reconocerla, dejarla existir, y decidir cómo actuar frente a ella) son procesos distintos. El primero suele acumular tensión que sale después, de forma menos controlada. El segundo permite procesarla sin que tome el control de tus decisiones.",
+        "En la práctica, regularse se parece más a esto: notar que estás enojado antes de reaccionar, darte un momento antes de responder, y elegir conscientemente qué hacer con eso — en vez de que la emoción decida por ti automáticamente.",
+        "Es una habilidad que se entrena, no un rasgo de personalidad fijo. Nadie nace regulándose bien; se aprende con práctica, generalmente con apoyo, sobre todo si de niños no tuvimos modelos que nos mostraran cómo hacerlo."
+      ]
     }
   };
+
+  // Orden histórico de todos los artículos publicados (el más antiguo primero).
+  // Los últimos 3 son los que se muestran como tarjetas destacadas; el resto queda en el archivo.
+  const articleOrder = ['a1', 'a5', 'a6', 'a2', 'a3', 'a4'];
+  const featuredKeys = articleOrder.slice(-3);
+  const archivedKeys = articleOrder.slice(0, -3);
 
   const privacyPolicy = {
     tag: "Legal",
@@ -720,6 +756,26 @@
     refreshLikeDisplay(key, 'modalLikeCount', document.getElementById('modalLikeBtn'));
   };
 
+  // --- Archivo de artículos anteriores ---
+  const openArchive = () => {
+    modalContent.innerHTML =
+      '<span class="tag">Archivo</span>' +
+      '<h3>Artículos anteriores</h3>' +
+      '<p style="color:var(--text-soft); font-size:0.9rem; margin-top:-8px;">Todo lo publicado antes sigue disponible aquí, con sus "me gusta" acumulados.</p>' +
+      '<div id="archiveList" style="display:flex; flex-direction:column; gap:14px; margin-top:18px;">' +
+        archivedKeys.slice().reverse().map(key => {
+          const a = articles[key];
+          return '<button class="blog-card" data-article="' + key + '" style="text-align:left; width:100%;">' +
+            '<div class="blog-topic" style="padding:16px 18px 0;"><span class="tag">' + a.tag + '</span>' +
+            '<h4 style="font-size:0.98rem;">' + a.title + '</h4></div>' +
+            '<div class="blog-readmore" style="padding:0 18px 16px;">Leer más → <span class="like-mini">🤍 <span id="archiveLikes-' + key + '">—</span></span></div>' +
+          '</button>';
+        }).join('') +
+      '</div>';
+    overlay.classList.add('open');
+    archivedKeys.forEach(key => refreshLikeDisplay(key, 'archiveLikes-' + key, null));
+  };
+
   function refreshLikeDisplay(key, countElId, btnEl) {
     const countEl = document.getElementById(countElId);
     const alreadyLiked = localStorage.getItem('liked-' + key) === '1';
@@ -748,6 +804,8 @@
         }
         const cardCount = document.getElementById('cardLikes-' + key);
         if (cardCount) cardCount.textContent = d.value;
+        const archiveCount = document.getElementById('archiveLikes-' + key);
+        if (archiveCount) archiveCount.textContent = d.value;
       })
       .catch(() => {});
   }
@@ -755,18 +813,32 @@
   overlay.addEventListener('click', (e) => {
     if (e.target.closest('#modalLikeBtn')) {
       handleLikeClick(e.target.closest('#modalLikeBtn').dataset.article);
+      return;
+    }
+    // Clic en un artículo dentro de la lista de archivo
+    const archiveItem = e.target.closest('[data-article]');
+    if (archiveItem && archiveItem.closest('#archiveList')) {
+      openArticle(archiveItem.dataset.article);
     }
   });
 
-  // Carga inicial del contador visible en cada tarjeta
-  Object.keys(articles).forEach(key => refreshLikeDisplay(key, 'cardLikes-' + key, null));
+  // Carga inicial del contador visible en cada tarjeta destacada
+  featuredKeys.forEach(key => refreshLikeDisplay(key, 'cardLikes-' + key, null));
 
   document.querySelectorAll('.blog-card').forEach(card => {
     card.addEventListener('click', () => openArticle(card.dataset.article));
   });
 
-  // Links directos: #articulo-bariatrica, #articulo-apego, #articulo-saborear
-  const articleSlugs = { bariatrica: 'a1', apego: 'a2', saborear: 'a3' };
+  document.getElementById('archiveLink').addEventListener('click', (e) => {
+    e.preventDefault();
+    openArchive();
+  });
+
+  // Links directos: #articulo-<slug>
+  const articleSlugs = {
+    bariatrica: 'a1', apego: 'a2', saborear: 'a3',
+    depresion: 'a4', comunicacion: 'a5', 'regulacion-emocional': 'a6'
+  };
   function checkHashForArticle() {
     const hash = location.hash.replace('#articulo-', '');
     const key = articleSlugs[hash];
