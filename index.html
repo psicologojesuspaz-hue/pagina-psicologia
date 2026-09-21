@@ -160,6 +160,30 @@
     .breathe-circle{animation:none;}
   }
 
+  /* ---------- FLOAT LIBRO ---------- */
+  .float-book{
+    position:fixed; bottom:24px; left:24px; z-index:60;
+    background:var(--gold); color:var(--ink); font-weight:700; font-size:0.92rem;
+    display:flex; align-items:center; gap:8px; padding:12px 20px; border-radius:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2); transition:transform .2s;
+    animation:bookPulse 3.2s ease-in-out infinite;
+  }
+  .float-book:hover{transform:scale(1.05); animation-play-state:paused;}
+  @keyframes bookPulse{
+    0%, 78%, 100%{transform:translateY(0);}
+    83%{transform:translateY(-6px);}
+    88%{transform:translateY(0);}
+    92%{transform:translateY(-3px);}
+    96%{transform:translateY(0);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .float-book{animation:none;}
+  }
+  @media (max-width: 520px){
+    .float-book span.book-label{display:none;}
+    .float-book{padding:14px; border-radius:50%;}
+  }
+
   /* ---------- SOBRE MI ---------- */
   .about{background:var(--white);}
   .about-grid{display:grid; grid-template-columns:0.85fr 1.15fr; gap:56px; align-items:center;}
@@ -705,6 +729,10 @@
     </div>
   </div>
 </footer>
+
+<a href="#libro" class="float-book" aria-label="Conoce mi libro">
+  <span>📖</span><span class="book-label">Mi libro</span>
+</a>
 
 <a href="https://instagram.com/psicologo.jesuspaz" target="_blank" class="float-ig" aria-label="Ver Instagram">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#153A32" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="#153A32" stroke="none"/></svg>
