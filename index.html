@@ -360,6 +360,27 @@
     .sleep-card{grid-template-columns:1fr;}
   }
 
+  /* ---------- VIDEOS DE RELAJACIÓN ---------- */
+  .videos-section{background:var(--white);}
+  .videos-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:32px;
+  }
+  .video-card{
+    background:var(--sand); border-radius:var(--radius); padding:14px 14px 20px;
+    border:1px solid rgba(21,58,50,0.06);
+  }
+  .video-frame{
+    position:relative; width:100%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; background:var(--ink);
+  }
+  .video-frame iframe{position:absolute; inset:0; width:100%; height:100%; border:none;}
+  .video-card h3{
+    font-size:1.02rem; line-height:1.4; margin:16px 6px 0; color:var(--ink);
+  }
+  .videos-more{margin-top:28px;}
+  @media (max-width: 860px){
+    .videos-grid{grid-template-columns:1fr;}
+  }
+
   /* ---------- LIBRO ---------- */
   .book-section{background:var(--white);}
   .book{
@@ -466,6 +487,7 @@
       <a href="#servicios">Servicios</a>
       <a href="#libro">Libro</a>
       <a href="#actualidad">Actualidad</a>
+      <a href="#videos-relajacion">Relajación</a>
       <a href="#agendar" class="nav-cta">Agendar hora</a>
     </nav>
     <button class="burger" id="burgerBtn" aria-label="Menú">☰</button>
@@ -669,6 +691,37 @@
       </button>
     </div>
     <div class="blog-note">Este espacio se actualiza de forma periódica con contenido nuevo. Haz clic en una tarjeta para leer la nota completa. <a href="#" id="archiveLink" style="text-decoration:underline; color:var(--ink); font-weight:700;">Ver artículos anteriores →</a></div>
+  </div>
+</section>
+
+<section class="videos-section" id="videos-relajacion">
+  <div class="wrap">
+    <span class="eyebrow">Pausa y descanso</span>
+    <h2>Videos de relajación</h2>
+    <p style="color:var(--text-soft); max-width:640px; margin-top:10px;">Música y relajación guiada para calmar la mente y prepararte para dormir. Ponlos cuando quieras desconectarte.</p>
+    <div class="videos-grid">
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/i7Kd1tCvLog?rel=0" title="Música para dormir profundamente · 46 minutos · Pantalla negra" loading="lazy" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <h3>Música para dormir profundamente · 46 minutos · Pantalla negra</h3>
+      </div>
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/kSWr9nUsKnc?rel=0" title="Paisajes desde el aire · Música relajante para calmar la mente (26 min)" loading="lazy" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <h3>Paisajes desde el aire · Música relajante para calmar la mente (26 min)</h3>
+      </div>
+      <div class="video-card">
+        <div class="video-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/FDO3RQJN42A?rel=0" title="Soltar el día · Relajación guiada para dormir (pantalla negra)" loading="lazy" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <h3>Soltar el día · Relajación guiada para dormir (pantalla negra)</h3>
+      </div>
+    </div>
+    <div class="videos-more">
+      <a href="https://www.youtube.com/@PsicologoJesusPaz" target="_blank" rel="noopener" class="btn btn-outline" onclick="if(typeof gtag==='function'){gtag('event','click_youtube_canal',{event_category:'videos',event_label:'Ver más en YouTube'});}">Ver más en YouTube</a>
+    </div>
   </div>
 </section>
 
