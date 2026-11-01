@@ -746,6 +746,38 @@
     .bx-quote{padding:56px 24px;}
   }
 
+
+  /* ---------- HERO v2: FOTO MÁS CHICA, ANILLOS VISIBLES ---------- */
+  .hero-visual{height:520px;}
+  .hero-visual .breathe-wrap{transform:none;}
+  .hero-visual .breathe-circle{border-width:2px;}
+  .hero-visual .c1{width:290px; height:290px; background:rgba(47,156,125,0.14); border-color:rgba(47,156,125,0.6);}
+  .hero-visual .c2{width:360px; height:360px; border-color:rgba(232,162,58,0.7);}
+  .hero-visual .c3{width:430px; height:430px; border-color:rgba(47,156,125,0.5);}
+  .hero-visual .c4{width:500px; height:500px; border-color:rgba(201,107,122,0.5);}
+  .hero-photo{width:min(236px, 56%); border-radius:118px 118px 22px 22px; border-width:5px;}
+  .hero-chip{bottom:44px; left:0;}
+  @media (max-width: 860px){
+    .hero-visual{height:430px;}
+    .hero-visual .breathe-wrap{transform:scale(0.72);}
+    .hero-photo{width:190px; border-radius:95px 95px 20px 20px;}
+    .hero-chip{left:50%; bottom:6px;}
+  }
+
+
+  /* ---------- HERO v3: FOTO CIRCULAR, CONCÉNTRICA CON LOS ANILLOS ---------- */
+  .hero-photo{width:260px; aspect-ratio:1/1; border-radius:50%; border-width:5px;}
+  .hero-photo img{object-position:50% 0%; transform:scale(1.28); transform-origin:50% 14%;}
+  .hero-visual .c1{width:310px; height:310px;}
+  .hero-visual .c2{width:380px; height:380px;}
+  .hero-visual .c3{width:450px; height:450px;}
+  .hero-visual .c4{width:520px; height:520px;}
+  .hero-chip{bottom:40px; left:4%;}
+  @media (max-width: 860px){
+    .hero-photo{width:190px; border-radius:50%;}
+    .hero-chip{left:50%; bottom:6px;}
+  }
+
   :focus-visible{outline:2px solid var(--gold); outline-offset:3px;}
 </style>
 </head>
