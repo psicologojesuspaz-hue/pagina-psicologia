@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://psicologojesuspaz.netlify.app/sitemap.xml
+Sitemap: https://psicologojesuspaz.cl/sitemap.xml
